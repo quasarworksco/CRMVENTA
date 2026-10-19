@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>¡Gracias! | Nexo Multiservicios</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0b0b0b">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="assets/css/sitio.css">
+  <style>
+    .simple { min-height: 100vh; min-height: 100svh; display: grid; place-items: center; padding: 100px 0 60px; position: relative; overflow: hidden; isolation: isolate; }
+    .simple .rejilla { z-index: -1; }
+    .simple-in { max-width: 680px; text-align: center; }
+    .simple .sec-t { font-size: clamp(54px, 9vw, 120px); }
+    .simple .sec-lead { margin-inline: auto; }
+    .simple .kicker { justify-content: center; }
+    .simple .kicker::before { transform: scaleX(1); }
+    .acciones { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 34px; }
+    .sello { width: 92px; height: 92px; margin: 0 auto 30px; display: grid; place-items: center; border-radius: 50%; background: var(--ink); color: #fff; animation: aparecer-card .9s var(--spring) both; }
+    .sello svg { width: 40px; height: 40px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 30; stroke-dashoffset: 30; animation: trazo .8s .5s var(--ease) forwards; }
+    .grande { font-family: var(--font-serif); font-size: clamp(140px, 30vw, 300px); line-height: .8; color: transparent; -webkit-text-stroke: 1px var(--ink); }
+  </style>
+</head>
+<body>
+<header class="nav solid"><div class="container nav-in"><a href="./" class="nav-logo" aria-label="Inicio"><img src="assets/img/logo.svg" alt="Nexo" width="118" height="26"></a><div class="nav-act"><a class="btn btn-dark btn-sm" href="citas/"><span data-i18n="nav.cta">Agendar cita</span></a></div></div></header>
+<main class="simple"><div class="rejilla" aria-hidden="true"></div><div class="container simple-in">
+  <div class="sello" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+  <span class="kicker rv in" data-i18n="ty.kicker">Mensaje recibido</span>
+  <h1 class="sec-t in"><span class="ln"><span class="w" data-i18n="ty.t1">Gracias,</span></span> <span class="ln"><span class="w serif" data-i18n="ty.t2">ya lo tenemos.</span></span></h1>
+  <p class="sec-lead rv in" data-i18n="ty.lead">Nuestro equipo se comunicará contigo muy pronto para continuar con tu solicitud.</p>
+  <div class="acciones"><a class="btn btn-dark" href="./"><span data-i18n="ty.back">Volver al sitio</span></a><a class="btn btn-ghost" href="https://wa.me/17135550147" target="_blank" rel="noopener"><span data-i18n="ty.wa">Escríbenos por WhatsApp</span></a></div>
+</div></main>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

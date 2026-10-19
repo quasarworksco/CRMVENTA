@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pago recibido · Nexo Multiservicios</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0b0b0b">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/publico.css">
+  <style>
+    .ok-ico { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-50); color: var(--accent); margin-bottom: 18px; }
+    .ok-ico svg { width: 30px; height: 30px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .pago p { font-size: 16px; line-height: 1.7; color: var(--ink-2); }
+    .pago .acc { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+    .tarjeta { position: relative; margin: 22px 0 18px; aspect-ratio: 1.6; max-width: 360px; padding: 22px; border-radius: 20px; color: #fff; background: radial-gradient(300px 160px at 90% 0%, rgba(255,255,255,.25), transparent 60%), linear-gradient(135deg, #1a1a1a, #000); box-shadow: 0 30px 60px -30px rgba(0,0,0,.6); animation: rise .7s var(--ease) both; transition: transform .6s var(--ease); }
+    .tarjeta:hover { transform: rotate(-2deg) translateY(-4px); }
+    .t-chip { width: 44px; height: 32px; border-radius: 7px; background: linear-gradient(135deg, #d9d9d9, #8c8c8c); }
+    .t-num { margin-top: 26px; font-size: 21px; letter-spacing: .12em; font-variant-numeric: tabular-nums; }
+    .t-pie { position: absolute; left: 22px; right: 22px; bottom: 18px; display: flex; justify-content: space-between; font-size: 11.5px; letter-spacing: .14em; opacity: .8; }
+    .pc-form { display: grid; gap: 12px; max-width: 420px; }
+    .pc-form .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .pc-nota { font-size: 12.5px; color: var(--muted); }
+    @keyframes rise { from { opacity: 0; transform: translateY(14px) rotate(-3deg); } }
+  </style>
+</head>
+<body>
+<header class="p-top"><div class="container">
+  <a href="../" class="brand" aria-label="Nexo Multiservicios"><img class="brand-logo" src="../assets/img/logo.svg" alt="Nexo" width="92" height="20"><span class="brand-divider"></span><span class="brand-sub">Pago<br>seguro</span></a>
+</div></header>
+<main class="p-main"><div class="container"><div class="p-wrap">
+  <article class="p-card pago" id="checkout" hidden>
+    <span class="kicker">Pago seguro · demostración</span>
+    <h1>Pagar <span class="serif" id="pc-monto"></span></h1>
+    <p style="margin-top:8px" id="pc-concepto"></p>
+    <div class="tarjeta" aria-hidden="true"><div class="t-chip"></div><div class="t-num" id="t-num">•••• •••• •••• ••••</div><div class="t-pie"><span id="t-nom">NOMBRE EN LA TARJETA</span><span id="t-exp">MM/AA</span></div></div>
+    <form id="pc-form" class="pc-form" novalidate>
+      <div class="field"><label for="pc-nombre">Nombre en la tarjeta</label><input class="input" id="pc-nombre" autocomplete="cc-name" value="Cliente Demo"></div>
+      <div class="field"><label for="pc-num">Número de tarjeta</label><input class="input" id="pc-num" inputmode="numeric" autocomplete="cc-number" value="4242 4242 4242 4242"></div>
+      <div class="grid2"><div class="field"><label for="pc-exp">Vence</label><input class="input" id="pc-exp" value="12/29"></div><div class="field"><label for="pc-cvc">CVC</label><input class="input" id="pc-cvc" value="123"></div></div>
+      <div class="msg" id="pc-msg" hidden></div>
+      <button class="btn btn-primary" type="submit" style="width:100%"><span class="btn-label">Pagar ahora</span><span class="spinner" aria-hidden="true"></span></button>
+      <p class="pc-nota">Modo demostración: no se cobra nada. En producción esta pantalla la muestra tu pasarela de pago (Square, Stripe…).</p>
+    </form>
+  </article>
+  <article class="p-card pago" id="gracias">
+    <div class="ok-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+    <span class="kicker">Nexo Multiservicios</span>
+    <h1>¡Gracias por <span class="serif">tu pago!</span></h1>
+    <p style="margin-top:12px" id="g-texto">Tu pago con tarjeta quedó registrado en tu cuenta con nosotros.</p>
+    <p style="margin-top:10px">Si tienes una pregunta, escríbenos por WhatsApp.</p>
+    <div class="acc">
+      <a class="btn btn-primary" id="g-recibo" href="../recibo/" hidden><span>Ver mi recibo</span></a>
+      <a class="btn btn-ghost" href="https://wa.me/17135550147" target="_blank" rel="noopener"><span>Escribir por WhatsApp</span></a>
+      <a class="btn btn-ghost" href="../portal/"><span>Ver mi portal</span></a>
+    </div>
+  </article>
+</div></div></main>
+<footer class="p-foot">Nexo Multiservicios · Houston, Texas · <a href="../">Volver al sitio</a></footer>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/backend.js"></script>
+<script src="../assets/js/efectos.js"></script>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search), id = q.get('demo');
+  var $ = function (i) { return document.getElementById(i); };
+  if (!id) return;
+  var e = (CRM._db().enlaces_pago || []).filter(function (x) { return x.id === id; })[0];
+  if (!e || e.estado !== 'pendiente') { if (e) $('g-texto').textContent = 'Este enlace ya fue pagado. ¡Gracias!'; return; }
+  $('gracias').hidden = true; $('checkout').hidden = false;
+  $('pc-monto').textContent = Number(e.monto).toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+  $('pc-concepto').textContent = e.concepto || '';
+  function espejo() { $('t-num').textContent = $('pc-num').value || '•••• •••• •••• ••••'; $('t-nom').textContent = ($('pc-nombre').value || 'NOMBRE').toUpperCase(); $('t-exp').textContent = $('pc-exp').value || 'MM/AA'; }
+  ['pc-num', 'pc-nombre', 'pc-exp'].forEach(function (i) { $(i).addEventListener('input', espejo); }); espejo();
+  $('pc-form').addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var b = this.querySelector('button'); b.classList.add('loading'); b.disabled = true;
+    setTimeout(function () {
+      CRM.rpc('pagar_enlace_demo', { p_id: id }).then(function (r) {
+        $('checkout').hidden = true; $('gracias').hidden = false;
+        if (r && r.token) { $('g-recibo').href = '../recibo/?t=' + r.token; $('g-recibo').hidden = false; $('g-texto').textContent = 'Recibimos tu pago. Tu recibo es el #' + r.numero + '.'; }
+      });
+    }, 1200);
+  });
+})();
+</script>
+</body>
+</html>

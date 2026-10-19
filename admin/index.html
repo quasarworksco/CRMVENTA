@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Panel CRM · Nexo Multiservicios</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0b0b0b">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="../assets/css/styles.css?v=20261019c">
+  <link rel="stylesheet" href="../assets/css/admin.css?v=20261019c">
+  <link rel="stylesheet" href="../assets/css/mono.css?v=1">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+<symbol id="i-list" viewBox="0 0 24 24"><path d="M3 12h.01"/><path d="M3 18h.01"/><path d="M3 6h.01"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M8 6h13"/></symbol>
+<symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+<symbol id="i-layout" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></symbol>
+<symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m17 8-5-5-5 5"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M4.27 21a2 2 0 0 0 1.73 1H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3"/><path d="m9 18-1.5-1.5"/><circle cx="5" cy="14" r="3"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+<symbol id="i-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
+<symbol id="i-calculator" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M8 6h8"/><path d="M16 14v4"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></symbol>
+<symbol id="i-passport" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><circle cx="12" cy="10" r="4"/><path d="M8 10h8"/><path d="M12 6c1.3 1.3 1.3 6.7 0 8"/><path d="M12 6c-1.3 1.3-1.3 6.7 0 8"/><path d="M9 18h6"/></symbol>
+<symbol id="i-building" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></symbol>
+<symbol id="i-stamp" viewBox="0 0 24 24"><path d="M5 22h14"/><path d="M19.27 13.73A2.5 2.5 0 0 0 17.5 13h-11A2.5 2.5 0 0 0 4 15.5V17a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1.5c0-.66-.26-1.3-.73-1.77Z"/><path d="M14 13V8.5C14 7 15 7 15 5a3 3 0 0 0-3-3c-1.66 0-3 1-3 3s1 2 1 3.5V13"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+<symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></symbol>
+<symbol id="i-messenger" viewBox="0 0 24 24"><path d="M12 0C5.24 0 0 4.95 0 11.64c0 3.5 1.43 6.52 3.77 8.61.2.18.31.42.32.68l.07 2.14a.96.96 0 0 0 1.35.85l2.39-1.05a.96.96 0 0 1 .64-.05c1.1.3 2.27.46 3.46.46 6.76 0 12-4.95 12-11.64S18.76 0 12 0Zm7.2 8.95-3.52 5.6a1.8 1.8 0 0 1-2.6.48l-2.8-2.1a.72.72 0 0 0-.87 0l-3.79 2.87c-.5.38-1.17-.22-.82-.75l3.52-5.6a1.8 1.8 0 0 1 2.6-.48l2.8 2.1c.26.2.61.2.87 0l3.79-2.87c.5-.38 1.17.22.82.75Z"/></symbol>
+<symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.3"/><path d="M17.4 6.6h.01"/></symbol>
+<symbol id="i-message" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+<symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.14-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0l1.58 6.14a2 2 0 0 0 1.44 1.44l6.14 1.58a.5.5 0 0 1 0 .96l-6.14 1.58a2 2 0 0 0-1.44 1.44l-1.58 6.14a.5.5 0 0 1-.96 0z"/></symbol>
+<symbol id="i-clipboard" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></symbol>
+<symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+<symbol id="i-trending" viewBox="0 0 24 24"><path d="M22 7 13.5 15.5 8.5 10.5 2 17"/><path d="M16 7h6v6"/></symbol>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .71-1.53l7-6a2 2 0 0 1 2.58 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="M5 12h14"/></symbol>
+<symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></symbol>
+<symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/></symbol>
+<symbol id="i-edit" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></symbol>
+<symbol id="i-inbox" viewBox="0 0 24 24"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11Z"/></symbol>
+<symbol id="i-kanban" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 7v7"/><path d="M12 7v4"/><path d="M16 7v9"/></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5"/><path d="M3 21v-5h5"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+<symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+<symbol id="i-user-plus" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6"/><path d="M22 11h-6"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></symbol>
+<symbol id="i-image" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="M14.54 21.69a.5.5 0 0 0 .94-.03l6.5-19a.5.5 0 0 0-.64-.63l-19 6.5a.5.5 0 0 0-.02.93l7.93 3.18a2 2 0 0 1 1.11 1.11z"/><path d="m21.85 2.15-10.94 10.94"/></symbol>
+<symbol id="i-clip" viewBox="0 0 24 24"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></symbol>
+<symbol id="i-lupa" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+<symbol id="i-cash" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 12h.01M18 12h.01"/></symbol>
+<symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol>
+<symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/></symbol>
+<symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 22h18"/><path d="M6 18v-7M10 18v-7M14 18v-7M18 18v-7"/><path d="m12 2 8 5H4z"/></symbol>
+<symbol id="i-receipt" viewBox="0 0 24 24"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></symbol>
+<symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></symbol>
+<symbol id="i-hourglass" viewBox="0 0 24 24"><path d="M5 22h14M5 2h14"/><path d="M17 22v-4.17a2 2 0 0 0-.59-1.42L12 12l-4.41 4.41A2 2 0 0 0 7 17.83V22"/><path d="M7 2v4.17a2 2 0 0 0 .59 1.42L12 12l4.41-4.41A2 2 0 0 0 17 6.17V2"/></symbol>
+<symbol id="i-dots" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24"><path d="M10.27 21a2 2 0 0 0 3.46 0"/><path d="M3.26 15.33A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.67C19.41 13.96 18 12.5 18 8A6 6 0 0 0 6 8c0 4.5-1.41 5.96-2.74 7.33"/></symbol>
+<symbol id="i-bell-off" viewBox="0 0 24 24"><path d="M10.27 21a2 2 0 0 0 3.46 0"/><path d="M17 17H4a1 1 0 0 1-.74-1.67C4.59 13.96 6 12.5 6 8a6 6 0 0 1 .26-1.74"/><path d="M8.67 3.26A6 6 0 0 1 18 8c0 2.35.38 3.86.93 4.95"/><path d="m2 2 20 20"/></symbol>
+<symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+<symbol id="i-snow" viewBox="0 0 24 24"><path d="M2 12h20M12 2v20"/><path d="m20 16-4-4 4-4M4 8l4 4-4 4M16 4l-4 4-4-4M8 20l4-4 4 4"/></symbol>
+<symbol id="i-party" viewBox="0 0 24 24"><path d="M5.8 11.3 2 22l10.7-3.79"/><path d="M4 3h.01M22 8h.01M15 2h.01M22 20h.01"/><path d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10"/><path d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11-.11.7-.72 1.22-1.43 1.22H17"/><path d="m11 2 .33.82c.34.86-.2 1.82-1.11 1.98-.7.1-1.22.72-1.22 1.43V7"/><path d="M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z"/></symbol>
+<symbol id="i-dollar" viewBox="0 0 24 24"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></symbol>
+</svg>
+
+<!-- Acceso -->
+<section class="auth" id="view-login" hidden>
+  <div class="auth-card">
+    <img class="logo" src="../assets/img/logo.svg" alt="Nexo" width="150" height="33">
+    <div class="sub">Multiservicios · CRM</div>
+    <h1>Panel de tu <span class="serif">negocio</span></h1>
+    <p class="lead">Ingresa con tu correo y contraseña.</p>
+    <form id="login-form">
+      <div class="msg" id="login-msg" hidden></div>
+      <div class="field"><label for="l-email">Correo</label><input class="input" id="l-email" type="email" autocomplete="username" value="demo@tudominio.com" required></div>
+      <div class="field"><label for="l-pass">Contraseña</label><input class="input" id="l-pass" type="password" autocomplete="current-password" value="demo1234" required></div>
+      <button class="btn btn-dark" type="submit"><span class="btn-label">Ingresar</span><span class="spinner" aria-hidden="true"></span></button>
+      <div class="sep">o</div>
+      <button class="btn btn-ghost" type="button" id="demo-entrar"><span class="btn-label">Entrar a la demo sin cuenta</span><span class="spinner" aria-hidden="true"></span></button>
+      <div style="text-align:center"><button type="button" class="link-btn" id="forgot">Olvidé mi contraseña</button></div>
+      <p class="demo-hint"><b>Acceso libre de demostración.</b> Cualquier correo y contraseña funcionan. Los datos de ejemplo se guardan solo en este navegador y puedes restablecerlos cuando quieras.</p>
+    </form>
+  </div>
+  <div class="auth-foot">Producto listo para tu negocio · <a href="../">Ver sitio web</a></div>
+</section>
+
+<!-- Nueva contraseña / invitación -->
+<section class="auth" id="view-reset" hidden>
+  <div class="auth-card">
+    <img class="logo" src="../assets/img/logo.svg" alt="Nexo" width="150" height="33">
+    <h1 id="reset-title">Nueva contraseña</h1>
+    <p class="lead" id="reset-lead">Elige una contraseña de al menos 10 caracteres.</p>
+    <form id="reset-form">
+      <div class="msg" id="reset-msg" hidden></div>
+      <div class="field"><label for="r-pass">Contraseña</label><input class="input" id="r-pass" type="password" autocomplete="new-password" minlength="10" required></div>
+      <button class="btn btn-dark" type="submit">Guardar contraseña</button>
+    </form>
+  </div>
+</section>
+
+<!-- Sin acceso -->
+<section class="auth" id="view-denied" hidden>
+  <div class="auth-card" style="text-align:center">
+    <img class="logo" src="../assets/img/logo.svg" alt="Nexo" width="150" height="33">
+    <h1>Sin acceso</h1>
+    <p class="lead">Esta cuenta no tiene acceso al panel o fue desactivada. Pide acceso a la administración.</p>
+    <div style="margin-top:20px"><button class="btn btn-ghost" data-logout>Cerrar sesión</button></div>
+  </div>
+</section>
+
+<!-- Panel -->
+<div id="view-panel" class="app" hidden>
+  <aside class="side" aria-label="Menú del panel">
+    <a href="../" class="brand" aria-label="Nexo Multiservicios">
+      <img class="brand-logo" src="../assets/img/logo-light.svg" alt="Nexo" width="92" height="20"><span class="brand-divider"></span><span class="brand-sub">Panel<br>CRM</span>
+    </a>
+    <button class="side-search" type="button" data-buscar><svg class="icon icon-sm"><use href="#i-lupa"/></svg><span>Buscar</span><kbd>Ctrl K</kbd></button>
+    <nav class="side-nav">
+    <div class="nav-group">Trabajo</div>
+    <a class="nav-item" href="#/inicio" data-route="inicio"><svg class="icon"><use href="#i-home"/></svg><span>Inicio</span></a>
+    <a class="nav-item" href="#/solicitudes" data-route="solicitudes" data-alias="mensajes respuestas" data-perm="solicitudes"><svg class="icon"><use href="#i-inbox"/></svg><span>Solicitudes</span><span class="count" id="count-sol"></span></a>
+    <a class="nav-item" href="#/formularios" data-route="formularios" data-perm="solicitudes"><svg class="icon"><use href="#i-clipboard"/></svg><span>Formularios</span></a>
+    <a class="nav-item" href="#/clientes" data-route="clientes" data-perm="clientes|taxes"><svg class="icon"><use href="#i-users"/></svg><span>Clientes</span></a>
+    <a class="nav-item" href="#/casos" data-route="casos" data-perm="casos|taxes"><svg class="icon"><use href="#i-kanban"/></svg><span>Casos</span></a>
+    <a class="nav-item" href="#/bandeja" data-route="bandeja" data-perm="mensajes"><svg class="icon"><use href="#i-message"/></svg><span>Mensajes</span><span class="count" id="count-ban"></span></a>
+    <a class="nav-item" href="#/llamadas" data-route="llamadas" data-perm="llamadas"><svg class="icon"><use href="#i-phone"/></svg><span>Llamadas</span></a>
+    <a class="nav-item" href="#/agenda" data-route="agenda" data-perm="citas"><svg class="icon"><use href="#i-calendar"/></svg><span>Agenda</span><span class="count" id="count-cit"></span></a>
+    <a class="nav-item" href="#/tareas" data-route="tareas"><svg class="icon"><use href="#i-clipboard"/></svg><span>Tareas</span><span class="count" id="count-tar"></span></a>
+    <a class="nav-item" href="#/cobros" data-route="cobros" data-perm="cobros"><svg class="icon"><use href="#i-dollar"/></svg><span>Cobros</span></a>
+    <a class="nav-item" href="#/documentos" data-route="documentos" data-perm="documentos"><svg class="icon"><use href="#i-file"/></svg><span>Documentos</span></a>
+    <div class="nav-group">Marca</div>
+    <a class="nav-item" href="#/campanas" data-route="campanas" data-perm="campanas"><svg class="icon"><use href="#i-send"/></svg><span>Campañas</span></a>
+    <a class="nav-item" href="#/sitio" data-route="sitio" data-perm="sitio"><svg class="icon"><use href="#i-globe"/></svg><span>Sitio web</span></a>
+    <a class="nav-item" href="#/contenido" data-route="contenido" data-perm="contenido"><svg class="icon"><use href="#i-sparkles"/></svg><span>Contenido</span><span class="count" id="count-con"></span></a>
+    <div class="nav-group" data-perm="equipo">Ajustes</div>
+    <a class="nav-item" href="#/equipo" data-route="equipo" data-perm="equipo"><svg class="icon"><use href="#i-shield"/></svg><span>Equipo</span></a>
+    <a class="nav-item" href="#/ajustes" data-route="ajustes" data-perm="equipo"><svg class="icon"><use href="#i-layout"/></svg><span>Ajustes</span></a>
+    </nav>
+    <div class="demo-chip"><span><b>Modo demostración</b><br>Datos de ejemplo</span><button type="button" id="demo-reiniciar" title="Volver a los datos de ejemplo">Restablecer</button></div>
+    <div class="side-foot">
+      <span class="avatar" id="me-ini"></span>
+      <div class="who"><b id="me-name"></b><span id="me-rol"></span></div>
+      <button class="icon-btn" data-logout aria-label="Cerrar sesión" title="Cerrar sesión"><svg class="icon icon-sm"><use href="#i-logout"/></svg></button>
+    </div>
+  </aside>
+
+  <div>
+    <div class="mtop">
+      <img src="../assets/img/logo.svg" alt="Nexo" width="88" height="20">
+      <span style="flex:1"></span>
+      <button class="icon-btn" type="button" data-buscar aria-label="Buscar"><svg class="icon icon-sm"><use href="#i-lupa"/></svg></button>
+      <button class="icon-btn" data-logout aria-label="Cerrar sesión"><svg class="icon icon-sm"><use href="#i-logout"/></svg></button>
+    </div>
+    <main class="main" id="main"></main>
+  </div>
+</div>
+
+<!-- Panel lateral de detalle -->
+<div class="drawer-bg" id="drawer-bg" hidden></div>
+<aside class="drawer" id="drawer" hidden aria-modal="true" role="dialog" aria-labelledby="d-name">
+  <div class="d-head">
+    <div><div class="meta" id="d-meta"></div><h2 id="d-name"></h2></div>
+    <button class="x" id="d-close" aria-label="Cerrar"><svg class="icon icon-sm"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="d-body" id="d-body"></div>
+  <div class="d-foot" id="d-foot"></div>
+</aside>
+
+<script src="../assets/js/config.js?v=1"></script>
+<script src="../assets/js/backend.js?v=1"></script>
+<script src="../assets/js/efectos.js?v=1"></script>
+<script src="../assets/js/admin/core.js?v=20261019c"></script>
+<script src="../assets/js/admin/buscar.js?v=20261019c"></script>
+<script src="../assets/js/admin/inicio.js?v=20261019c"></script>
+<script src="../assets/js/admin/solicitudes.js?v=20261019c"></script>
+<script src="../assets/js/admin/formularios.js?v=20261019c"></script>
+<script src="../assets/js/admin/clientes.js?v=20261019c"></script>
+<script src="../assets/js/admin/casos.js?v=20261019c"></script>
+<script src="../assets/js/admin/caso-detalle.js?v=20261019c"></script>
+<script src="../assets/js/admin/tareas.js?v=20261019c"></script>
+<script src="../assets/js/admin/cobros.js?v=20261019c"></script>
+<script src="../assets/js/admin/documentos.js?v=20261019c"></script>
+<script src="../assets/js/admin/sitio.js?v=20261019c"></script>
+<script src="../assets/js/admin/contenido.js?v=20261019c"></script>
+<script src="../assets/js/admin/clientes-extra.js?v=20261019c"></script>
+<script src="../assets/js/admin/bandeja.js?v=20261019c"></script>
+<script src="../assets/js/admin/llamadas.js?v=20261019c"></script>
+<script src="../assets/js/admin/campanas.js?v=20261019c"></script>
+<script src="../assets/js/admin/agenda.js?v=20261019c"></script>
+<script src="../assets/js/admin/ajustes.js?v=20261019c"></script>
+<script src="../assets/js/admin/equipo.js?v=20261019c"></script>
+<script>APP.start();</script>
+</body>
+</html>

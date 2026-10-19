@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /formularios/
+Disallow: /gracias.html
+Disallow: /portal/
+Disallow: /firmar/
+Disallow: /recibo/
+Disallow: /pago/
+
+# Cambia "tudominio.com" por el dominio del negocio
+Sitemap: https://tudominio.com/sitemap.xml
